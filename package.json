@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-wulijonc-help",
-  "description": "一个自用的help插件",
-  "version": "0.0.2",
+  "description": "自定义命令发送图片/文字的轻量 help 插件",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -13,10 +13,28 @@
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "help",
+    "image"
   ],
+  "homepage": "https://github.com/WuliJonC/koishi-plugin-wulijonc-help",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WuliJonC/koishi-plugin-wulijonc-help.git"
+  },
   "devDependencies": {},
   "peerDependencies": {
     "koishi": "^4.18.7"
+  },
+  "koishi": {
+    "description": {
+      "zh": "自定义命令发送图片/文字，支持多命令、云端URL和本地文件",
+      "en": "Send images/text via custom commands, supports multiple commands, cloud URLs and local files"
+    },
+    "service": {
+      "required": [],
+      "optional": [],
+      "implements": []
+    }
   }
 }
