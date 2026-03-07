@@ -85,8 +85,17 @@ function getMimeType(filePath: string): string {
 //   对于「发帮助图」这类低频命令完全可以接受。
 
 export function apply(ctx: Context, config: Config) {
+  const logger = ctx.logger('wulijonc-help')
+
   for (const entry of config.commands) {
     if (!entry.command) continue
+
+    // 检查指令名是否已被其他插件占用，避免静默复用导致冲突
+    const existing = ctx.$commander.get(entry.command)
+    if (existing) {
+      logger.warn(`指令名 "${entry.command}" 已被其他插件注册，跳过`)
+      continue
+    }
 
     ctx.command(entry.command, entry.description)
       .action(async () => {
