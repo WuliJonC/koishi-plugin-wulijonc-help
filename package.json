@@ -1,13 +1,14 @@
 {
-  "name": "koishi-plugin-wulijonc-help",
+  "name": "@wulijonc/koishi-plugin-help",
   "description": "自定义命令发送图片/文字的轻量 help 插件",
-  "version": "0.0.4",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
     "lib",
     "dist"
   ],
+  "author": "WuliJonC <ma.jonc@qq.com>",
   "license": "MIT",
   "scripts": {},
   "keywords": [
